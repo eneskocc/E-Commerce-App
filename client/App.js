@@ -1,112 +1,94 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import * as React from 'react';
+import {Image, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {store} from './app/redux/store';
+import {Provider} from 'react-redux';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+//Tab Screens
+import {AnasayfaStackScreen, AramaStackScreen,SorularStackScreen,GuncelStackScreen} from './app/screens';
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+
+import { colors } from './app/config';
+import Login from './app/screens/Welcome/Login';
+
+const Tab = createBottomTabNavigator();
+
+const TabScreens = ({navigation}) => {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: colors.red,
+        tabBarInactiveTintColor: 'gray',
+      }}>
+    <Tab.Screen
+        name="Anasayfa"
+        component={AnasayfaStackScreen}
+        options={{
+          tabBarIcon: ({focused}) => {
+            const image = focused
+              ? require('./app/assets/images/bottom/home.png')
+              : require('./app/assets/images/bottom2/home.png');
+            return <Image style={{width: 25, height: 25}} source={image} />;
           },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
+        }}
+      />
+      <Tab.Screen
+        name="Arama"
+        component={AramaStackScreen}
+        options={{
+          tabBarIcon: ({focused}) => {
+            const image = focused
+              ? require('./app/assets/images/bottom/search.png')
+              : require('./app/assets/images/bottom2/search.png');
+            return <Image style={{width: 25, height: 25}} source={image} />;
           },
-        ]}>
-        {children}
-      </Text>
-    </View>
+        }}
+      />
+      <Tab.Screen
+        name="Sorular"
+        component={SorularStackScreen}
+        options={{
+          tabBarIcon: ({focused}) => {
+            const image = focused
+              ? require('./app/assets/images/bottom/ask.png')
+              : require('./app/assets/images/bottom2/ask.png');
+            return <Image style={{width: 25, height: 25}} source={image} />;
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Guncel"
+        component={GuncelStackScreen}
+        options={{
+          tabBarIcon: ({focused}) => {
+            const image = focused
+              ? require('./app/assets/images/bottom/book.png')
+              : require('./app/assets/images/bottom2/book.png');
+            return <Image style={{width: 25, height: 25}} source={image} />;
+          },
+        }}
+      />
+      
+    </Tab.Navigator>
   );
 };
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+export const Stack = createNativeStackNavigator();
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
+export default function App() {
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="TabScreens" component={TabScreens} />
+        
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
-};
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-export default App;
+}
