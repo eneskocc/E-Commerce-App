@@ -5,6 +5,8 @@ import Btn from '../../component/Btn';
 import BtnSocail from '../../component/BtnSocail';
 import BtnGo from '../../component/BtnGo';
 import TxtWelcomeHeader from '../../component/TxtWelcomeHeader';
+import TextInputLogin from '../../component/TextInputLogin';
+
 
 export class Login extends Component {
   render() {
@@ -13,6 +15,7 @@ export class Login extends Component {
         <BackHeader />
         <View style={{paddingHorizontal: '3%'}}>
             <TxtWelcomeHeader txt={'Login'}/>
+            <TextInputLogin />
             <BtnGo txt={'Forgot your password?'}/>
           <Btn txt={'LOGIN'} />
         </View>
