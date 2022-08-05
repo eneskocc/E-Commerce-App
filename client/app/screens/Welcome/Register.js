@@ -6,15 +6,15 @@ import BtnSocail from '../../component/BtnSocail';
 import BtnGo from '../../component/BtnGo';
 import TxtWelcomeHeader from '../../component/TxtWelcomeHeader';
 
-export class Login extends Component {
+export class Register extends Component {
   render() {
     return (
       <View>
         <BackHeader />
         <View style={{paddingHorizontal: '3%'}}>
-            <TxtWelcomeHeader txt={'Login'}/>
-            <BtnGo txt={'Forgot your password?'}/>
-          <Btn txt={'LOGIN'} />
+            <TxtWelcomeHeader txt={'Sign up'}/>
+            <BtnGo txt={'Already have an account?'}/>
+          <Btn txt={'SIGN UP'} />
         </View>
         <View style={{alignItems:'center',paddingVertical:10}}>
             <Text style={{fontSize:14,lineHeight:20,fontWeight:'500'}}>Or sign up with social account</Text>
@@ -28,4 +28,4 @@ export class Login extends Component {
   }
 }
 
-export default Login;
+export default Register;
