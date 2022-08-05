@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import BackHeader from '../../component/BackHeader';
 import Btn from '../../component/Btn';
 import BtnSocail from '../../component/BtnSocail';
+import BtnGo from '../../component/BtnGo';
 
 export class Login extends Component {
   render() {
@@ -10,6 +11,7 @@ export class Login extends Component {
       <View>
         <BackHeader />
         <View style={{paddingHorizontal: '3%'}}>
+            <BtnGo txt={'Already have an account?'}/>
           <Btn txt={'SIGN UP'} />
         </View>
         <View style={{alignItems:'center',paddingVertical:10}}>
