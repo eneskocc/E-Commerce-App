@@ -4,6 +4,7 @@ import BackHeader from '../../component/BackHeader';
 import Btn from '../../component/Btn';
 import BtnSocail from '../../component/BtnSocail';
 import BtnGo from '../../component/BtnGo';
+import TxtWelcomeHeader from '../../component/TxtWelcomeHeader';
 
 export class Login extends Component {
   render() {
@@ -11,6 +12,7 @@ export class Login extends Component {
       <View>
         <BackHeader />
         <View style={{paddingHorizontal: '3%'}}>
+            <TxtWelcomeHeader txt={'Sign up'}/>
             <BtnGo txt={'Already have an account?'}/>
           <Btn txt={'SIGN UP'} />
         </View>
