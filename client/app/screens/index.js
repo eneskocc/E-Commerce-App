@@ -29,6 +29,18 @@ function AramaStackScreen({navigation}) {
     </AramaStack.Navigator>
   );
 }
+export const Arama2Stack = createNativeStackNavigator();
+
+function Arama2StackScreen({navigation}) {
+  return (
+    <Arama2Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Arama2Stack.Screen name="Search" component={Anasayfa} />
+    </Arama2Stack.Navigator>
+  );
+}
 export const SorularStack = createNativeStackNavigator();
 
 function SorularStackScreen({navigation}) {
@@ -58,6 +70,7 @@ function GuncelStackScreen({navigation}) {
 export {
   AnasayfaStackScreen,
   AramaStackScreen,
+  Arama2StackScreen,
   SorularStackScreen,
   GuncelStackScreen,
 };

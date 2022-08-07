@@ -11,6 +11,7 @@ import {Provider} from 'react-redux';
 import {
   AnasayfaStackScreen,
   AramaStackScreen,
+  Arama2StackScreen,
   SorularStackScreen,
   GuncelStackScreen,
 } from './app/screens';
@@ -32,7 +33,7 @@ const TabScreens = ({navigation}) => {
         tabBarInactiveTintColor: 'gray',
       }}>
       <Tab.Screen
-        name="Anasayfa"
+        name="Home"
         component={AnasayfaStackScreen}
         options={{
           tabBarIcon: ({focused}) => {
@@ -44,37 +45,49 @@ const TabScreens = ({navigation}) => {
         }}
       />
       <Tab.Screen
-        name="Arama"
+        name="Shop"
         component={AramaStackScreen}
         options={{
           tabBarIcon: ({focused}) => {
             const image = focused
-              ? require('./app/assets/images/bottom/search.png')
-              : require('./app/assets/images/bottom2/search.png');
+              ? require('./app/assets/images/bottom/shop.png')
+              : require('./app/assets/images/bottom/shop.png');
+            return <Image style={{width: 25, height: 25}} source={image} />;
+          },
+        }}
+      />
+       <Tab.Screen
+        name="Bag"
+        component={Arama2StackScreen}
+        options={{
+          tabBarIcon: ({focused}) => {
+            const image = focused
+              ? require('./app/assets/images/bottom/bag.png')
+              : require('./app/assets/images/bottom/bag.png');
             return <Image style={{width: 25, height: 25}} source={image} />;
           },
         }}
       />
       <Tab.Screen
-        name="Sorular"
+        name="Favorites"
         component={SorularStackScreen}
         options={{
           tabBarIcon: ({focused}) => {
             const image = focused
-              ? require('./app/assets/images/bottom/ask.png')
-              : require('./app/assets/images/bottom2/ask.png');
+              ? require('./app/assets/images/bottom/heart.png')
+              : require('./app/assets/images/bottom/heart.png');
             return <Image style={{width: 25, height: 25}} source={image} />;
           },
         }}
       />
       <Tab.Screen
-        name="Guncel"
+        name="Profile"
         component={GuncelStackScreen}
         options={{
           tabBarIcon: ({focused}) => {
             const image = focused
-              ? require('./app/assets/images/bottom/book.png')
-              : require('./app/assets/images/bottom2/book.png');
+              ? require('./app/assets/images/bottom/profile.png')
+              : require('./app/assets/images/bottom/profile.png');
             return <Image style={{width: 25, height: 25}} source={image} />;
           },
         }}

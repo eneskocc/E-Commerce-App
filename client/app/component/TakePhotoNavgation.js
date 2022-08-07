@@ -41,7 +41,8 @@ export class TakePhotoNavgation extends Component {
             backgroundColor: colors.red,
             alignItems: 'center',
             justifyContent: 'center',
-          }}>
+          }}
+          onPress={this.props.onClick}>
           <Image
             style={{
               width: 20,

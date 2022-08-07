@@ -14,8 +14,8 @@ export class TakePhoto extends Component {
         <ImageBackground
           source={require('../../assets/images/Visual/image2.png')}
           resizeMode="cover"
-          style={{height: '95%', justifyContent:'flex-end'}}>
-       <TakePhotoNavgation />
+          style={{height: '95%', justifyContent:'flex-end',resizeMode: 'contain',}}>
+       <TakePhotoNavgation onClick={() => this.props.navigation.navigate('TabScreens')}/>
         </ImageBackground>
       </View>
     )
