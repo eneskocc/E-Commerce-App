@@ -12,7 +12,8 @@ export class BtnGo extends Component {
           flexDirection: 'row',
           justifyContent: 'flex-end',
           marginVertical:10,
-        }}>
+        }}
+        onPress={this.props.onClick}>
         <Text
           style={{
             fontSize: 14,

@@ -11,12 +11,12 @@ export class Login extends Component {
   render() {
     return (
       <View>
-        <BackHeader />
+        <BackHeader  onClick={() => this.props.navigation.goBack()}/>
         <View style={{paddingHorizontal: '3%'}}>
           <TxtWelcomeHeader txt={'Login'} />
           <TextInputLogin txt={'Email'} content={'Enter Your Name Here'} />
           <TextInputLogin txt={''} content={'Enter Your Password Here'} />
-          <BtnGo txt={'Forgot your password?'} />
+          <BtnGo txt={'Forgot your password?'} onClick={()=>this.props.navigation.navigate("ForgotPassword")}/>
           <Btn txt={'LOGIN'} />
         </View>
         <View style={{alignItems: 'center', paddingVertical: 10}}>

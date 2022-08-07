@@ -8,11 +8,17 @@ import {store} from './app/redux/store';
 import {Provider} from 'react-redux';
 
 //Tab Screens
-import {AnasayfaStackScreen, AramaStackScreen,SorularStackScreen,GuncelStackScreen} from './app/screens';
+import {
+  AnasayfaStackScreen,
+  AramaStackScreen,
+  SorularStackScreen,
+  GuncelStackScreen,
+} from './app/screens';
 
-
-import { colors } from './app/config';
+import {colors} from './app/config';
 import Login from './app/screens/Welcome/Login';
+import Register from './app/screens/Welcome/Register';
+import ForgotPassword from './app/screens/Welcome/ForgotPassword';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +30,7 @@ const TabScreens = ({navigation}) => {
         tabBarActiveTintColor: colors.red,
         tabBarInactiveTintColor: 'gray',
       }}>
-    <Tab.Screen
+      <Tab.Screen
         name="Anasayfa"
         component={AnasayfaStackScreen}
         options={{
@@ -72,7 +78,6 @@ const TabScreens = ({navigation}) => {
           },
         }}
       />
-      
     </Tab.Navigator>
   );
 };
@@ -84,9 +89,10 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="TabScreens" component={TabScreens} />
-        
+          <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+          <Stack.Screen name="TabScreens" component={TabScreens} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
