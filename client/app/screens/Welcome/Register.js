@@ -12,16 +12,26 @@ export class Register extends Component {
       <View>
         <BackHeader />
         <View style={{paddingHorizontal: '3%'}}>
-            <TxtWelcomeHeader txt={'Sign up'}/>
-            <BtnGo txt={'Already have an account?'}/>
+          <TxtWelcomeHeader txt={'Sign up'} />
+          <TextInputLogin txt={'Name'} content={'Enter Your Name Here'} />
+          <TextInputLogin txt={'Email'} content={'Enter Your Email Here'} />
+          <TextInputLogin txt={''} content={'Enter Your Password Here'} />
+          <BtnGo txt={'Already have an account?'} />
           <Btn txt={'SIGN UP'} />
         </View>
-        <View style={{alignItems:'center',paddingVertical:10}}>
-            <Text style={{fontSize:14,lineHeight:20,fontWeight:'500'}}>Or sign up with social account</Text>
-        <View style={{justifyContent: 'center', flexDirection: 'row',paddingVertical:10}}>
-          <BtnSocail img={require('../../assets/images/home/facebook.png')} />
-          <BtnSocail img={require('../../assets/images/home/google.png')} />
-        </View>
+        <View style={{alignItems: 'center', paddingVertical: 10}}>
+          <Text style={{fontSize: 14, lineHeight: 20, fontWeight: '500'}}>
+            Or sign up with social account
+          </Text>
+          <View
+            style={{
+              justifyContent: 'center',
+              flexDirection: 'row',
+              paddingVertical: 10,
+            }}>
+            <BtnSocail img={require('../../assets/images/home/facebook.png')} />
+            <BtnSocail img={require('../../assets/images/home/google.png')} />
+          </View>
         </View>
       </View>
     );

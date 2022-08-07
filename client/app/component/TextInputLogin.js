@@ -15,11 +15,12 @@ export class TextInputLogin extends Component {
           width: '100%',
           paddingHorizontal:15,
           paddingVertical:10,
+          marginVertical:5,
         }}>
         <View style={{flex: 1}}>
-          <Text style={{fontSize:11,lineHeight:11,color:colors.gray}}>Name</Text>
+          <Text style={{fontSize:11,lineHeight:11,color:colors.gray}}>{this.props.txt}</Text>
           <TextInput
-            placeholder="Enter Your Name Here"
+            placeholder={this.props.content}
             underlineColorAndroid="transparent"
           />
         </View>
