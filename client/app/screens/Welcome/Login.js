@@ -17,7 +17,7 @@ export class Login extends Component {
           <TextInputLogin txt={'Email'} content={'Enter Your Name Here'} />
           <TextInputLogin txt={''} content={'Enter Your Password Here'} />
           <BtnGo txt={'Forgot your password?'} onClick={()=>this.props.navigation.navigate("ForgotPassword")}/>
-          <Btn txt={'LOGIN'} />
+          <Btn txt={'LOGIN'} onClick={()=>this.props.navigation.navigate("Visual")}/>
         </View>
         <View style={{alignItems: 'center', paddingVertical: 10}}>
           <Text style={{fontSize: 14, lineHeight: 20, fontWeight: '500'}}>

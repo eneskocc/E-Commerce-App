@@ -2,17 +2,18 @@ import {Text, View, TouchableOpacity} from 'react-native';
 import React, {Component} from 'react';
 import {colors} from '../config';
 
-export class Btn extends Component {
+export class BtnTransparan extends Component {
   render() {
     return (
       <TouchableOpacity
         style={{
-          backgroundColor: colors.red,
           width: '100%',
           paddingVertical: 10,
           borderRadius: 25,
+          borderWidth:1,
+          borderColor:colors.white,
           alignItems: 'center',
-          marginVertical:10,
+          marginVertical: 10,
         }}
         onPress={this.props.onClick}>
         <Text
@@ -29,4 +30,4 @@ export class Btn extends Component {
   }
 }
 
-export default Btn;
+export default BtnTransparan;

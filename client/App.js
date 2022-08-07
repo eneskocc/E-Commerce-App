@@ -19,7 +19,7 @@ import {colors} from './app/config';
 import Login from './app/screens/Welcome/Login';
 import Register from './app/screens/Welcome/Register';
 import ForgotPassword from './app/screens/Welcome/ForgotPassword';
-
+import VisualSearch from './app/screens/VisualSearch/İndex';
 const Tab = createBottomTabNavigator();
 
 const TabScreens = ({navigation}) => {
@@ -92,6 +92,7 @@ export default function App() {
           <Stack.Screen name="Register" component={Register} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+          <Stack.Screen name="Visual" component={VisualSearch} />
           <Stack.Screen name="TabScreens" component={TabScreens} />
         </Stack.Navigator>
       </NavigationContainer>

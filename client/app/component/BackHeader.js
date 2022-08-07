@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 export class BackHeader extends Component {
   render() {
     return (
-      <SafeAreaView>
+      <SafeAreaView style={{flexDirection:'row'}}>
         <TouchableOpacity onPress={this.props.onClick}>
         <Image
           style={{
@@ -12,10 +12,12 @@ export class BackHeader extends Component {
             height: 20,
             resizeMode: 'contain',
             marginHorizontal: 10,
+            marginBottom:15,
           }}
           source={require('../assets/images/home/back.png')}
         />
         </TouchableOpacity>
+        <View style={{width:'80%',alignItems:'center'}}><Text style={{fontSize:18,lineHeight:22,fontWeight:'600'}}>{this.props.txt}</Text></View>
       </SafeAreaView>
     );
   }
