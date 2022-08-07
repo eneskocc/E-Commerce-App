@@ -28,7 +28,7 @@ export class İndex extends Component {
             </Text>
             <Btn
               txt={'TAKE A PHOTO'}
-              onClick={() => this.props.navigation.navigate('Visual')}
+              onClick={() => this.props.navigation.navigate('TakePhoto')}
             />
             <BtnTransparan
               txt={'UPLOAD AN IMAGE'}
