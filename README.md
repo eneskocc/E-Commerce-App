@@ -1,6 +1,6 @@
 # E-Commerce-App
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/32553624/158076183-249400fb-103a-4f8f-ac60-d8d0654600ce.png" width="300" height="600" />
+  <img src="[https://user-images.githubusercontent.com/32553624/158076183-249400fb-103a-4f8f-ac60-d8d0654600ce.png](https://github.com/eneskocc/E-Commerce-App/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-08-07%20at%2014.24.08.png)" width="300" height="600" />
 
 <img src="https://user-images.githubusercontent.com/32553624/158076187-e12f4778-1ae6-4d98-8dba-14f10a150fb8.png" width="300" height="600" />
 <img src="https://user-images.githubusercontent.com/32553624/158076189-b31c4139-df87-4f57-b1ab-2c530776441a.png" width="300" height="600" />
