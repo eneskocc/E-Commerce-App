@@ -9,9 +9,9 @@ import {Provider} from 'react-redux';
 
 //Tab Screens
 import {
-  AnasayfaStackScreen,
-  AramaStackScreen,
-  Arama2StackScreen,
+  HomeStackScreen,
+  ShopStackScreen,
+  Shop2StackScreen,
   SorularStackScreen,
   GuncelStackScreen,
 } from './app/screens';
@@ -34,7 +34,7 @@ const TabScreens = ({navigation}) => {
       }}>
       <Tab.Screen
         name="Home"
-        component={AnasayfaStackScreen}
+        component={HomeStackScreen}
         options={{
           tabBarIcon: ({focused}) => {
             const image = focused
@@ -46,7 +46,7 @@ const TabScreens = ({navigation}) => {
       />
       <Tab.Screen
         name="Shop"
-        component={AramaStackScreen}
+        component={ShopStackScreen}
         options={{
           tabBarIcon: ({focused}) => {
             const image = focused
@@ -58,7 +58,7 @@ const TabScreens = ({navigation}) => {
       />
        <Tab.Screen
         name="Bag"
-        component={Arama2StackScreen}
+        component={Shop2StackScreen}
         options={{
           tabBarIcon: ({focused}) => {
             const image = focused

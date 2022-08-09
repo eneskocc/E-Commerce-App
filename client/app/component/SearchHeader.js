@@ -1,0 +1,44 @@
+import {Text, View, SafeAreaView, Image, TouchableOpacity} from 'react-native';
+import React, {Component} from 'react';
+import {colors} from '../config';
+
+export class SearchHeader extends Component {
+  render() {
+    return (
+      <SafeAreaView
+        style={{flexDirection: 'row', backgroundColor: colors.white}}>
+        <TouchableOpacity onPress={this.props.onClick}>
+          <Image
+            style={{
+              width: 20,
+              height: 20,
+              resizeMode: 'contain',
+              marginHorizontal: 10,
+              marginBottom: 15,
+            }}
+            source={require('../assets/images/home/back.png')}
+          />
+        </TouchableOpacity>
+        <View style={{width: '78%', alignItems: 'center'}}>
+          <Text style={{fontSize: 18, lineHeight: 22, fontWeight: '600'}}>
+            {this.props.txt}
+          </Text>
+        </View>
+        <TouchableOpacity onPress={this.props.onClick}>
+          <Image
+            style={{
+              width: 25,
+              height: 25,
+              resizeMode: 'contain',
+              marginHorizontal: 10,
+              marginBottom: 15,
+            }}
+            source={require('../assets/images/shop/search.png')}
+          />
+        </TouchableOpacity>
+      </SafeAreaView>
+    );
+  }
+}
+
+export default SearchHeader;
