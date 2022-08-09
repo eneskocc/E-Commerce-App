@@ -2,9 +2,7 @@
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/32553624/158076183-249400fb-103a-4f8f-ac60-d8d0654600ce.png" width="300" height="600" />
 
-<img src="https://user-images.githubusercontent.com/32553624/158076187-e12f4778-1ae6-4d98-8dba-14f10a150fb8.png" width="300" height="600" />
 <img src="https://user-images.githubusercontent.com/32553624/183735206-62a76443-49a9-43d5-83d4-a42c3f79f342.png" width="300" height="600" />
   </p>
   <p align="center">
