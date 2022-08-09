@@ -1,44 +1,45 @@
 import * as React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-//Anasayfa
-import Anasayfa from './Anasayfa';
+//Home
+import Home from './Home';
+import Shop from './Shop';
 
-export const AnasayfaStack = createNativeStackNavigator();
+export const HomeStack = createNativeStackNavigator();
 
-function AnasayfaStackScreen({navigation}) {
+function HomeStackScreen({navigation}) {
   return (
-    <AnasayfaStack.Navigator
+    <HomeStack.Navigator
       screenOptions={{
         headerShown: false,
       }}>
-      <AnasayfaStack.Screen name="Home" component={Anasayfa} />
-    </AnasayfaStack.Navigator>
+      <HomeStack.Screen name="Home" component={Home} />
+    </HomeStack.Navigator>
   );
 }
 
-export const AramaStack = createNativeStackNavigator();
+export const ShopStack = createNativeStackNavigator();
 
-function AramaStackScreen({navigation}) {
+function ShopStackScreen({navigation}) {
   return (
-    <AramaStack.Navigator
+    <ShopStack.Navigator
       screenOptions={{
         headerShown: false,
       }}>
-      <AramaStack.Screen name="Search" component={Anasayfa} />
-    </AramaStack.Navigator>
+      <ShopStack.Screen name="Shop" component={Shop} />
+    </ShopStack.Navigator>
   );
 }
-export const Arama2Stack = createNativeStackNavigator();
+export const Shop2Stack = createNativeStackNavigator();
 
-function Arama2StackScreen({navigation}) {
+function Shop2StackScreen({navigation}) {
   return (
-    <Arama2Stack.Navigator
+    <Shop2Stack.Navigator
       screenOptions={{
         headerShown: false,
       }}>
-      <Arama2Stack.Screen name="Search" component={Anasayfa} />
-    </Arama2Stack.Navigator>
+      <Shop2Stack.Screen name="Search" component={Home} />
+    </Shop2Stack.Navigator>
   );
 }
 export const SorularStack = createNativeStackNavigator();
@@ -49,7 +50,7 @@ function SorularStackScreen({navigation}) {
       screenOptions={{
         headerShown: false,
       }}>
-      <SorularStack.Screen name="Question" component={Anasayfa} />
+      <SorularStack.Screen name="Question" component={Home} />
     </SorularStack.Navigator>
   );
 }
@@ -62,15 +63,15 @@ function GuncelStackScreen({navigation}) {
       screenOptions={{
         headerShown: false,
       }}>
-      <GuncelStack.Screen name="Current" component={Anasayfa} />
+      <GuncelStack.Screen name="Current" component={Home} />
     </GuncelStack.Navigator>
   );
 }
 
 export {
-  AnasayfaStackScreen,
-  AramaStackScreen,
-  Arama2StackScreen,
+  HomeStackScreen,
+  ShopStackScreen,
+  Shop2StackScreen,
   SorularStackScreen,
   GuncelStackScreen,
 };
