@@ -5,7 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {colors} from '../../config';
 import ViewCategories from '../../component/ViewCategories';
-function HomeScreen() {
+function HomeScreen(props) {
   return (
     <View style={{paddingHorizontal: '3%', alignItems: 'center'}}>
       <ScrollView>
@@ -40,6 +40,7 @@ function HomeScreen() {
         <ViewCategories
           txt={'New'}
           img={require('../../assets/images/shop/image41.png')}
+ props={props}
         />
         <ViewCategories
           txt={'Clothes'}
