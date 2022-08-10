@@ -2,7 +2,7 @@ import {Text, View, TouchableOpacity,Image} from 'react-native';
 import React, {Component} from 'react';
 import {colors} from '../config';
 
-export default class ViewCategories extends Component {
+export class ViewCategories extends Component {
   render() {
     return (
       <TouchableOpacity
@@ -13,7 +13,8 @@ export default class ViewCategories extends Component {
           alignItems: 'center',
           marginVertical: 10,
           flexDirection:'row'
-        }}>
+        }}
+        onPress={this.props.onClick}>
         <Text
           style={{
               width:'50%',
@@ -39,3 +40,4 @@ export default class ViewCategories extends Component {
     );
   }
 }
+export default ViewCategories;
