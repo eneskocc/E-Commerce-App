@@ -1,5 +1,9 @@
 # E-Commerce-App
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/32553624/184212853-5c44d21e-83bb-4328-b141-934b2f2e8423.png" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/32553624/184217885-79bb657b-5622-4bfe-b99d-5197ee162a14.png" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/32553624/184217872-99b1a723-da65-43a3-b9ee-72b838a830b5.png" width="200" height="400" />
+  </p>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/32553624/184212853-5c44d21e-83bb-4328-b141-934b2f2e8423.png" width="200" height="400" />
 <img src="https://user-images.githubusercontent.com/32553624/184212872-5c590388-342f-4b1f-8bf8-695fec8f35de.png" width="200" height="400" />
