@@ -35,7 +35,8 @@ export class ViewFiter extends Component {
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+          onPress={this.props.onClick}>
           <Image
             source={require('../assets/images/filters/filter.png')}
             resizeMode="cover"

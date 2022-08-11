@@ -13,7 +13,7 @@ export class Catalog extends Component {
         <SearchHeader />
         <View style={{paddingHorizontal: '4%', backgroundColor: colors.white}}>
           <ViewTags />
-          <ViewFiter />
+          <ViewFiter onClick={()=>this.props.navigation.navigate('Filter')}/>
         </View>
         <View style={{paddingHorizontal: '4%'}}>
           <ScrollView>

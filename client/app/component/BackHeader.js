@@ -1,10 +1,11 @@
 import {Text, View, SafeAreaView, Image, TouchableOpacity} from 'react-native';
 import React, {Component} from 'react';
+import { colors } from '../config';
 
 export class BackHeader extends Component {
   render() {
     return (
-      <SafeAreaView style={{flexDirection:'row'}}>
+      <SafeAreaView style={{flexDirection:'row',backgroundColor:colors.white}}>
         <TouchableOpacity onPress={this.props.onClick}>
         <Image
           style={{

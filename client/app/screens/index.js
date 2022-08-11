@@ -8,6 +8,7 @@ import Shop from './Shop';
 import Catalog from './Shop/Catalog';
 import ShopHome from './Shop/ShopHome';
 import SearchHeader from '../component/SearchHeader';
+import Filter from './Shop/Filter';
 
 export const HomeStack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ function ShopStackScreen({navigation}) {
       headerShown: false,
     }}>
     <ShopStack.Screen name="Shop" component={Catalog} />
+    <ShopStack.Screen name="Filter" component={Filter} />
   </ShopStack.Navigator>
   );
 }
