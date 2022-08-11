@@ -20,7 +20,7 @@ class SearchTextBox extends Component {
         </TouchableOpacity>
         <TextInput
           style={{flex: 1}}
-          placeholder="Arama yapın..."
+          placeholder="Search"
           underlineColorAndroid="transparent"
         />
       </View>
