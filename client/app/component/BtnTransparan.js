@@ -11,14 +11,14 @@ export class BtnTransparan extends Component {
           paddingVertical: 10,
           borderRadius: 25,
           borderWidth:1,
-          borderColor:colors.white,
+          borderColor:this.props.border,
           alignItems: 'center',
           marginVertical: 10,
         }}
         onPress={this.props.onClick}>
         <Text
           style={{
-            color: colors.white,
+            color: this.props.border,
             fontSize: 14,
             lineHeight: 20,
             fontWeight: '600',

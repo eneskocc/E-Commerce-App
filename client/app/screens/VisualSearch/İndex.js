@@ -33,6 +33,7 @@ export class İndex extends Component {
             <BtnTransparan
               txt={'UPLOAD AN IMAGE'}
               onClick={() => this.props.navigation.navigate('Visual')}
+              border={colors.black}
             />
           </View>
         </ImageBackground>

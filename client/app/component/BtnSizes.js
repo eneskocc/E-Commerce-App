@@ -36,7 +36,7 @@ export class BtnSizes extends Component {
           style={{
             borderColor: colors.gray,
             borderWidth: 1,
-            width: 36,
+            width: 45,
             height: 36,
             borderRadius: 10,
             justifyContent:'center',
@@ -53,14 +53,14 @@ var styles = StyleSheet.create({
     alignItems: 'center',
   },
   btnNormal: {
-    width: 36,
+    width: 45,
     height: 36,
     borderRadius: 10,
     borderColor: colors.white,
     borderWidth: 1,
   },
   btnPress: {
-    width: 36,
+    width: 45,
     height: 36,
     borderRadius: 10,
     borderColor: colors.white,

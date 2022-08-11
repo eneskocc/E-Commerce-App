@@ -23,6 +23,7 @@ import ForgotPassword from './app/screens/Welcome/ForgotPassword';
 import VisualSearch from './app/screens/VisualSearch/İndex';
 import TakePhoto from './app/screens/VisualSearch/TakePhoto';
 import Catalog from './app/screens/Shop/Catalog';
+import Filter from './app/screens/Shop/Filter';
 const Tab = createBottomTabNavigator();
 
 const TabScreens = ({navigation}) => {
