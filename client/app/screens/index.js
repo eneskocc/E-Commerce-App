@@ -22,18 +22,15 @@ function HomeStackScreen({navigation}) {
   );
 }
 
-const Tab = createMaterialTopTabNavigator();
 export const ShopStack = createNativeStackNavigator();
 function ShopStackScreen({navigation}) {
   return (
-    <NavigationContainer independent={true}>
-      <SearchHeader txt={'Categories'} />
-      <Tab.Navigator>
-        <Tab.Screen name="Women" component={ShopHome} />
-        <Tab.Screen name="Men" component={ShopHome} />
-        <Tab.Screen name="Kids" component={ShopHome} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <ShopStack.Navigator
+    screenOptions={{
+      headerShown: false,
+    }}>
+    <ShopStack.Screen name="Shop" component={Catalog} />
+  </ShopStack.Navigator>
   );
 }
 

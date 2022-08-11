@@ -12,7 +12,8 @@ const apiUrl='https://myapp.herokuapp.com';
 const colors = {
     red:'#DB3022',
     white:'#ffffff',
-    gray:'#9B9B9B'
+    gray:'#9B9B9B',
+    AcikGray:'#F9F9F9'
 };
 
 

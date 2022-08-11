@@ -57,7 +57,7 @@ const TabScreens = ({navigation}) => {
           },
         }}
       />
-       <Tab.Screen
+      <Tab.Screen
         name="Bag"
         component={Shop2StackScreen}
         options={{
@@ -104,12 +104,12 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false}}>
+          <Stack.Screen name="TabScreens" component={TabScreens} />
           <Stack.Screen name="Register" component={Register} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
           <Stack.Screen name="Visual" component={VisualSearch} />
           <Stack.Screen name="TakePhoto" component={TakePhoto} />
-          <Stack.Screen name="TabScreens" component={TabScreens} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

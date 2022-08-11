@@ -36,9 +36,9 @@ export class index extends Component {
         <View style={{paddingHorizontal: '4%', backgroundColor: colors.white}}>
           <BtnViewAll header={'New'} txt={'You’ve never seen it before!'} />
           <ScrollView horizontal>
-            <ViewProduct img={require('../../assets/images/product/eee.png')} />
-            <ViewProduct img={require('../../assets/images/product/aaa.png')}/>
-            <ViewProduct img={require('../../assets/images/product/image.png')}/>
+            <ViewProduct img={require('../../assets/images/product/eee.png')}  index={1}/>
+            <ViewProduct img={require('../../assets/images/product/aaa.png')}  index={2}/>
+            <ViewProduct img={require('../../assets/images/product/image.png')}  index={3}/>
           </ScrollView>
         </View>
       </ScrollView>

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import ViewCategories from '../../component/ViewCategories';
 import {colors} from '../../config';
 
-export class Home extends Component {
+export class ShopHome extends Component {
   render() {
     return (
       <View style={{paddingHorizontal: '3%', alignItems: 'center'}}>
@@ -40,21 +40,25 @@ export class Home extends Component {
             txt={'New'}
             img={require('../../assets/images/shop/image41.png')}
             onClick={() => this.props.navigation.navigate('Catalog')}
+            index={1}
           />
           <ViewCategories
             txt={'Clothes'}
             img={require('../../assets/images/shop/image.png')}
             onClick={() => this.props.navigation.navigate('Catalog')}
+            index={2}
           />
           <ViewCategories
             txt={'Shoes'}
             img={require('../../assets/images/shop/image2.png')}
             onClick={() => this.props.navigation.navigate('Catalog')}
+            index={3}
           />
           <ViewCategories
             txt={'Accesories'}
             img={require('../../assets/images/shop/image3.png')}
             onClick={() => this.props.navigation.navigate('Catalog')}
+            index={4}
           />
         </ScrollView>
       </View>
@@ -62,4 +66,4 @@ export class Home extends Component {
   }
 }
 
-export default Home;
+export default ShopHome;

@@ -19,16 +19,14 @@ const Tab = createMaterialTopTabNavigator();
 export class index extends Component {
   render() {
     return (
-      <View>
+      <NavigationContainer independent={true}>
         <SearchHeader txt={'Categories'} />
-        <NavigationContainer independent={true}>
-          <Tab.Navigator>
-            <Tab.Screen name="Women" component={ShopHome} />
-            <Tab.Screen name="Men" component={SettingsScreen} />
-            <Tab.Screen name="Catalog" component={SettingsScreen} />
-          </Tab.Navigator>
-        </NavigationContainer>
-      </View>
+        <Tab.Navigator>
+          <Tab.Screen name="Women" component={ShopHome} />
+          <Tab.Screen name="Men" component={SettingsScreen} />
+          <Tab.Screen name="Catalog" component={SettingsScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
     );
   }
 }
