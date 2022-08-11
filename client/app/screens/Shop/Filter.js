@@ -12,12 +12,17 @@ import {colors} from '../../config';
 import BtnSizes from '../../component/BtnSizes';
 import BtnCategory from '../../component/BtnCategory';
 import SearchTextBox from '../../component/SearchTextBox';
+import Btn from '../../component/Btn';
+import BtnTransparan from '../../component/BtnTransparan';
 
 export class Filter extends Component {
   render() {
     return (
       <View>
-        <BackHeader txt={'Filters'} />
+        <BackHeader
+          txt={'Filters'}
+          onClick={() => this.props.navigation.goBack()}
+        />
         <View>
           <Text style={{marginHorizontal: 10, marginVertical: 10}}>Colors</Text>
           <View
@@ -72,7 +77,8 @@ export class Filter extends Component {
             <BtnCategory txt={'GIRLS'} />
           </View>
         </View>
-        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Brand')}
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate('Brand')}
           style={{
             marginHorizontal: 10,
             marginVertical: 15,
@@ -100,6 +106,14 @@ export class Filter extends Component {
             />
           </TouchableOpacity>
         </TouchableOpacity>
+        <View style={{paddingHorizontal: '4%', flexDirection: 'row',justifyContent:'space-between',marginVertical:20,}}>
+          <View style={{width:'45%'}}>
+            <BtnTransparan txt={'Discard'} border={colors.black}/>
+          </View>
+          <View style={{width:'45%'}}>
+            <Btn txt={'Apply'} />
+          </View>
+        </View>
       </View>
     );
   }
