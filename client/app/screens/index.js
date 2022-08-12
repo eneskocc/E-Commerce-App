@@ -10,6 +10,7 @@ import ShopHome from './Shop/ShopHome';
 import SearchHeader from '../component/SearchHeader';
 import Filter from './Shop/Filter';
 import Brand from './Shop/Brand';
+import Product from './Product';
 
 export const HomeStack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ function HomeStackScreen({navigation}) {
         headerShown: false,
       }}>
       <HomeStack.Screen name="Home" component={Home} />
+      <HomeStack.Screen name="Product" component={Product} />
     </HomeStack.Navigator>
   );
 }
@@ -34,6 +36,7 @@ function ShopStackScreen({navigation}) {
     <ShopStack.Screen name="Shop" component={Catalog} />
     <ShopStack.Screen name="Filter" component={Filter} />
     <ShopStack.Screen name="Brand" component={Brand} />
+    <ShopStack.Screen name="Product" component={Product} />
   </ShopStack.Navigator>
   );
 }

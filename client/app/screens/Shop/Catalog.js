@@ -18,7 +18,8 @@ export class Catalog extends Component {
         <View style={{paddingHorizontal: '4%'}}>
           <ScrollView>
             <ViewProductCard
-              img={require('../../assets/images/product/img1.png')}
+              img={require('../../assets/images/product/img3.png')}
+              onClick={() => this.props.navigation.navigate('Product')}
               index={1}
             />
             <ViewProductCard

@@ -13,7 +13,7 @@ import {colors} from '../config';
 export class ViewProduct extends Component {
   render() {
     return (
-      <View style={{paddingHorizontal: 10, paddingVertical: 5}}>
+      <TouchableOpacity style={{paddingHorizontal: 10, paddingVertical: 5}} onPress={this.props.onClick}>
         <View style={{position: 'relative', top: 35, left: 5}}>
           <ViewDiscount txt={'-%20'} />
         </View>
@@ -116,7 +116,7 @@ export class ViewProduct extends Component {
           <Text style={{fontSize:11,lineHeight:11,color: colors.gray,marginVertical:5}}>Dorothy Perkins</Text>
           <Text style={{fontSize:16,lineHeight:16}}>Evening Dress</Text>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }

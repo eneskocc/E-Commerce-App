@@ -13,7 +13,8 @@ import {colors} from '../config';
 export class ViewProductCard extends Component {
   render() {
     return (
-      <View
+      <TouchableOpacity
+      onPress={this.props.onClick}
         style={{
           flexDirection: 'row',
           backgroundColor: colors.white,
@@ -140,7 +141,7 @@ export class ViewProductCard extends Component {
             50$
           </Text>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }
