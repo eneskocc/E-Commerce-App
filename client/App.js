@@ -24,6 +24,7 @@ import VisualSearch from './app/screens/VisualSearch/İndex';
 import TakePhoto from './app/screens/VisualSearch/TakePhoto';
 import Catalog from './app/screens/Shop/Catalog';
 import Filter from './app/screens/Shop/Filter';
+import Product from './app/screens/Product';
 const Tab = createBottomTabNavigator();
 
 const TabScreens = ({navigation}) => {
@@ -111,6 +112,7 @@ export default function App() {
           <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
           <Stack.Screen name="Visual" component={VisualSearch} />
           <Stack.Screen name="TakePhoto" component={TakePhoto} />
+          <Stack.Screen name="Product" component={Product} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
