@@ -6,7 +6,7 @@ export class ShareHeader extends Component {
   render() {
     return (
       <SafeAreaView
-        style={{flexDirection: 'row', backgroundColor: colors.white}}>
+        style={{flexDirection: 'row', backgroundColor: colors.white,}}>
         <TouchableOpacity onPress={this.props.onClick}>
           <Image
             style={{
